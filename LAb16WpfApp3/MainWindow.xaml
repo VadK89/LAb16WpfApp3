@@ -1,0 +1,126 @@
+﻿<Window x:Class="LAb16WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAb16WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <!--Задание 1. Доработать проект покадровой анимации из лекции-->
+    <Canvas>
+        <Path Data="M56.833662,31.166667 C22.833662,47.166667 30.167434,72.499471 28.834106,77.832779 27.500778,83.166087 34.167736,180.49989 48.834299,199.16657 63.500862,217.83326 104.16735,231.83287 112.16727,231.83287 120.16719,231.83287 127.50045,233.16654 127.50045,233.16654 127.50045,233.16654 196.83308,236.49953 232.83272,205.83289 268.83235,175.16625 250.8329,115.83309 244.83295,92.499745 238.833,69.166404 236.83275,46.499729 224.83287,40.499726 212.83299,34.499724 90.833662,15.166667&#xD;&#xA;56.833662,31.166667 z" Height="209.304" Canvas.Left="28.666" Stretch="Fill" Stroke="Black" Canvas.Top="24.969" Width="226.995" Fill="#FFE5E8CE"/>
+        <Path Data="M99,184.66667 C99,184.66667 101.5,120.49967 121.83333,117.49967 142.16667,114.49967 148.16739,188.49967 148.16739,188.49967 148.16739,188.49967 130.50025,189.49966 123.83353,184.83301 117.16681,180.16635 99,184.66667 99,184.66667 z" Fill="#FFF4F4F5" Height="86.179" Canvas.Left="57" Stretch="Fill" Stroke="Black" Canvas.Top="44.411" Width="64.167"/>
+        <Path Data="M99,184.66667 C99,184.66667 101.5,120.49967 121.83333,117.49967 142.16667,114.49967 148.16739,188.49967 148.16739,188.49967 148.16739,188.49967 130.50025,189.49966 123.83353,184.83301 117.16681,180.16635 99,184.66667 99,184.66667 z" 
+              Fill="#FFF4F4F5" 
+              Height="86.179" 
+              Canvas.Left="151.5" 
+              Stretch="Fill" 
+              Stroke="Black" 
+              Canvas.Top="44.411" 
+              Width="64.167"
+              RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Ellipse Height="16" 
+                 Canvas.Left="98" 
+                 Stroke="Black" 
+                 Canvas.Top="108" 
+                 Width="16" 
+                 RenderTransformOrigin="0.531,0.273">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.35,0.35">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.0 "/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames 
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="108"/>
+                                <LinearDoubleKeyFrame KeyTime="20%" Value="79"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="49"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="73"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="105"/>
+                                <LinearDoubleKeyFrame KeyTime="99%" Value="108"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames 
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="98"/>
+                                <LinearDoubleKeyFrame KeyTime="20%" Value="96"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="80"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="65"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="59"/>
+                                <LinearDoubleKeyFrame KeyTime="99%" Value="98"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Ellipse.Triggers>
+        </Ellipse>
+        <Ellipse Height="16" 
+                 Canvas.Left="157" 
+                 Stroke="Black" 
+                 Canvas.Top="108" 
+                 Width="16" 
+                 RenderTransformOrigin="0.531,0.273">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.35,0.35">
+                    <GradientStop Color="Violet" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.0 "/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames 
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="108"/>
+                                <LinearDoubleKeyFrame KeyTime="20%" Value="79"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="49"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="73"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="105"/>
+                                <LinearDoubleKeyFrame KeyTime="99%" Value="108"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames 
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="157"/>
+                                <LinearDoubleKeyFrame KeyTime="20%" Value="161"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="176"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="190"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="196"/>
+                                <LinearDoubleKeyFrame KeyTime="99%" Value="157"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Ellipse.Triggers>
+        </Ellipse>
+        <Path Data="M130,145 C122.66667,153.66667 116.83333,145.16667 121.5,156.5 126.16667,167.83333 130,145 130,145 z" Fill="#FFE5E8CE" Height="15.656" Canvas.Left="119.828" Stretch="Fill" Stroke="Black" Canvas.Top="145" Width="11.172"/>
+        <Path Data="M72,187.66667 C72,187.66667 99.5,214.49967 132.83333,213.83301 166.16667,213.16634 178.16724,212.49925 190.83397,206.49935 203.50071,200.49946 208.83445,198.49949 212.16781,192.49959 215.50117,186.49969 216.16751,179.16648 216.16751,179.16648" Fill="#FFE5E8CE" Height="35.679" Canvas.Left="72" Stretch="Fill" Stroke="Black" Canvas.Top="179.167" Width="145.167"/>
+
+    </Canvas>
+</Window>
